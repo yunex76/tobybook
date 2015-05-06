@@ -20,6 +20,7 @@ public class UserDao {
 		ps.setString(2, user.getName());
 		ps.setString(3, user.getPassword());
 		
+		System.out.println(ps.toString());
 		ps.executeUpdate();
 		
 		ps.close();
@@ -34,6 +35,7 @@ public class UserDao {
 		PreparedStatement ps = c.prepareStatement("select * from users where id = ?");
 		ps.setString(1, id);
 		
+		System.out.println(ps.toString());
 		ResultSet rs = ps.executeQuery();
 		rs.next();
 
