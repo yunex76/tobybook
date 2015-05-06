@@ -11,11 +11,11 @@ import com.yunex.firstspring.domain.User;
  * Hello world!
  *
  */
-public class AppTest 
+public class AppTest2 
 {
     public static void main( String[] args ) throws ClassNotFoundException, SQLException
     {
-    	System.out.println("AppTest run.............");
+    	System.out.println("AppTest2 run.............");
     	
     	ConnectionMaker connectionMaker = new DConnectionMaker();
     	UserDao dao = new UserDao(connectionMaker);
