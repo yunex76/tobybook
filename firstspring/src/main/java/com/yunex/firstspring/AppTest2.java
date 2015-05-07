@@ -4,6 +4,7 @@ import java.sql.SQLException;
 
 import com.yunex.firstspring.dao.ConnectionMaker;
 import com.yunex.firstspring.dao.DConnectionMaker;
+import com.yunex.firstspring.dao.DaoFactory;
 import com.yunex.firstspring.dao.UserDao;
 import com.yunex.firstspring.domain.User;
 
@@ -17,8 +18,7 @@ public class AppTest2
     {
     	System.out.println("AppTest2 run.............");
     	
-    	ConnectionMaker connectionMaker = new DConnectionMaker();
-    	UserDao dao = new UserDao(connectionMaker);
+    	UserDao dao = new DaoFactory().userDao();
     	
     	User user = new User();
     	user.setId("whiteship");
